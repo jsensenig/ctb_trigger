@@ -1,0 +1,68 @@
+\documentclass{beamer}
+
+\usepackage{hyperref}
+\usepackage{epstopdf} 
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\title{Central Trigger Board}
+\author{ Update \\ Jonathon Sensenig}
+\institute{University of Pennsylvania}
+\date{}
+
+% position the logo
+%\addtobeamertemplate{frametitle}{}{%
+%	\begin{textblock*}{100mm}(\textwidth,-1cm)
+%		\includegraphics[height=1cm,width=1cm,keepaspectratio]{figs/Penn-Shield.png}
+%\end{textblock*}}
+
+%Add page number to the foot bar
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\insertshorttitle\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
+
+%Use an image as the background
+%\usebackgroundtemplate{
+%	\includegraphics[width=\paperwidth,height=\paperheight]{figs/bblue3.pdf}
+%
+
+%Add logos to title page only
+%\titlegraphic{\includegraphics[width=1.75cm]{figs/DUNElogo_color.png}\hspace*{2.75cm}~
+%	\includegraphics[width=3cm]{figs/shield-logotype-whitebkgd-RGB-4k.png}
+%}
+
+\usetheme{Copenhagen}
+\setbeamertemplate{navigation symbols}{} %NO nav buttons!
+
+% Color modification
+\definecolor{MyBackground}{RGB}{255, 255, 255}
+\definecolor{jgrey}{RGB}{121, 147, 179}
+\definecolor{jred}{RGB}{181,0,0}
+\setbeamercolor{background canvas}{bg=MyBackground}
+\setbeamercolor{structure}{fg=jgrey}% to modify  immediately all palettes
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{title in head/foot}{fg=jred}
+\setbeamercolor{author}{bg=black,fg=white}
+\setbeamercolor{frametitle}{fg=black}
+
+\begin{document}
+	\frame {
+		\titlepage
+		\hspace{0.2cm}
+		\includegraphics[width=10cm,height=2.25cm]{figs/dune_penn_logo.png}
+		
+	}	
+	
+	\frame {
+	    \frametitle{Modified PTB  1/2}
+	    \framesubtitle{Firmware which is near completion}
+		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz.jpg}
+	}
+	\frame {
+	    \frametitle{Modified PTB  2/2}
+	    \framesubtitle{Firmware which is near completion}
+		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz_case.jpg}
+	}
+	
+	
+\end{document}
