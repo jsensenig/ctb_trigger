@@ -55,7 +55,7 @@
 	
 	\frame {
 	    \frametitle{Modified PTB  1/2}
-	    \framesubtitle{Firmware which is near completion}
+	    \framesubtitle{}
 	    \begin{figure}
 	    	\centering
 	    		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz.jpg}
@@ -63,7 +63,7 @@
 	}
 	\frame {
 	    \frametitle{Modified PTB  2/2}
-	    \framesubtitle{Firmware which is near completion}
+	    \framesubtitle{}
 		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz_case.jpg}
 	}
 
@@ -103,30 +103,109 @@
 	\end{itemize}
 
 	\begin{center}
-	\begin{table}[ht]	
-		\caption{1-2 GeV/c beam triggers inclusive trigger masks.}
-		\centering 
-		\begin{tabular}{c c }
-			\hline \hline         
-			Trigger & $\lbrack$ 8 : 0 $\rbrack$ = $\lbrack$ BG, C2, C1, TOF, BP1-5 $\rbrack$    \\ [0.5ex] 
-			\hline 
-			No Beam & 0 XX X XXXXX  \\	
-			e$^-$ & 1 11 1 11111  \\
-			$\pi$/K/p & 1 00 1 11111  \\
-			\hline	
-		\end{tabular}
-		\label{table:bi_trig}	
-	\end{table}	
-\end{center}
+		\begin{table}[ht]	
+			\caption{1-2 GeV/c beam triggers inclusive trigger masks.}
+			\centering 
+			\begin{tabular}{c c }
+				\hline \hline         
+				Trigger & $\lbrack$ 8 : 0 $\rbrack$ = $\lbrack$ BG, C2, C1, TOF, BP1-5 $\rbrack$    \\ [0.5ex] 
+				\hline 
+				No Beam & 0 XX X XXXXX  \\	
+				e$^-$ & 1 11 1 11111  \\
+				$\pi$/K/p & 1 00 1 11111  \\
+				\hline	
+			\end{tabular}
+			\label{table:bi_trig}	
+		\end{table}	
+	\end{center}
 	}
 	
 	\frame {
 	\frametitle{CRT Trigger  1/}
 	\framesubtitle{Channel Mapping of CRT Modules  (ref. Camillo M.)}
 	\begin{figure}
-		\centering
+		%\centering
 		\includegraphics[width=9cm,height=6cm]{figs/crt_mapping.pdf}
 	\end{figure}
+	
+	\begin{itemize}
+		\item Front: Channels 1 - 16 $\rightarrow$ Bits [15:0]
+		\item Rear: Channels 15 - 32 $\rightarrow$ Bits [31:16]
+	\end{itemize}
 }
+
+	\frame {
+		\frametitle{CRT Trigger  1/}
+		\framesubtitle{CRT Triggers Top View}
+		\begin{figure}
+			\centering
+			\includegraphics[width=9cm,height=4.5cm]{figs/pd_cosmic_top.png}
+		\end{figure}
+		
+		\begin{itemize}
+			\item Top to bottom cosmic tracks
+			\item How precise (relatively) do we want to get with this, for a first go?
+			\item Something like (1 OR 2) AND (25 OR 26)
+		\end{itemize}
+}
+
+	\frame {
+		\frametitle{CRT Trigger  1/}
+		\framesubtitle{CRT Triggers Side View}
+		\begin{figure}
+			\centering
+			\includegraphics[width=9cm,height=4.5cm]{figs/pd_cosmic_side.png}
+		\end{figure}
+		
+		\begin{itemize}
+			\item Top to bottom cosmic tracks
+			\item How precise (relatively) do we want to get with this, for a first go?
+			\item Something like (1 OR 2) AND (23 OR 24)
+		\end{itemize}
+	}
+	
+	\frame {
+		\frametitle{CRT Trigger Summary 1/}
+		\framesubtitle{Channel Mapping of CRT Modules  (ref. Camillo M.)}
+		
+		\begin{itemize}
+			\item Top to bottom cosmic tracks
+			\item How precise (relatively) do we want to get with this, for a first go?
+			\item Something like (1 OR 2) AND (25 OR 26)
+		\end{itemize}
+		
+	\begin{center}
+		\begin{table}[ht]	
+			\caption{1-2 GeV/c beam triggers inclusive trigger masks.}
+			\centering 
+			\begin{tabular}{c c }
+				\hline \hline         
+				Trigger & CRT Channels $\lbrack$ 31 : 0 $\rbrack$ =[Rear, Front]  \\ [0.5ex] 
+				\hline 
+				No Beam & 0 XX X XXXXX  \\	
+				e$^-$ & 1 11 1 11111  \\
+				$\pi$/K/p & 1 00 1 11111  \\
+				\hline	
+			\end{tabular}
+			\label{table:crt_trig}	
+		\end{table}	
+	\end{center}		
+	}
+	
+	\frame {
+		\frametitle{PDS Trigger  1/}
+		\framesubtitle{}
+		
+		\begin{itemize}
+			\item Don't have any of the PDS channel mappings
+			\item On the SSPs some threshold set to discriminate on the SiPM signal sums.
+			\item Counting trigger on PDS channels spatially near each other in the detector.
+			\begin{itemize}
+				\item E.g., only look at photon detectors in the TPCs on the side of the beam (+x side) during beam and require greater than some number to send a signal.
+			\end{itemize}
+			\item Inclusive trigger on the result of the counting triggers. 
+		\end{itemize}
+	}
+	
 	
 \end{document}
