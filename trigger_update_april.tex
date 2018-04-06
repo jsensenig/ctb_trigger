@@ -56,13 +56,77 @@
 	\frame {
 	    \frametitle{Modified PTB  1/2}
 	    \framesubtitle{Firmware which is near completion}
-		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz.jpg}
+	    \begin{figure}
+	    	\centering
+	    		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz.jpg}
+	    \end{figure}	
 	}
 	\frame {
 	    \frametitle{Modified PTB  2/2}
 	    \framesubtitle{Firmware which is near completion}
 		\includegraphics[width=9cm,height=6cm]{figs/ptb_mz_case.jpg}
 	}
+
+	\frame {
+	\frametitle{Beam Trigger  1/4}
+	\framesubtitle{The Beamline as Represented in simulation}
+	\begin{figure}
+		\centering
+		\includegraphics[width=9cm,height=6cm]{figs/h4beam.png}
+	\end{figure}
+	}
+
+	\frame {
+	\frametitle{Beam Trigger  2/4}
+	\framesubtitle{Some Questions}
+	\begin{itemize}
+		\item Is there any reason to trigger if not all fiber trackers fire? Maybe something like $>$3 trackers, low probability of a false trigger and will offset the approx. 6.5\% inefficiency of the trackers.
+		\item
+	\end{itemize}
+	}
+
+	\frame {
+	\frametitle{Beam Trigger  3/4}
+	\framesubtitle{Jon Paley's Presentation at Collab. Meeting}
+	\begin{figure}
+		\centering
+			\includegraphics[width=9cm,height=6cm]{figs/2018-01-31_Trigger_Discussion_BI.pdf}
+	\end{figure}
+	}
+
+	\frame {
+	\frametitle{Beam Trigger  4/4}
+	\framesubtitle{Beam Triggers Summary}
+	\begin{itemize}
+		\item Start with all fiber trackers.
+		\item Start with 1 - 2 GeV/c triggers since the first run (engineering run) will be with 2GeV/c beam.
+	\end{itemize}
+
+	\begin{center}
+	\begin{table}[ht]	
+		\caption{1-2 GeV/c beam triggers inclusive trigger masks.}
+		\centering 
+		\begin{tabular}{c c }
+			\hline \hline         
+			Trigger & $\lbrack$ 8 : 0 $\rbrack$ = $\lbrack$ BG, C2, C1, TOF, BP1-5 $\rbrack$    \\ [0.5ex] 
+			\hline 
+			No Beam & 0 XX X XXXXX  \\	
+			e$^-$ & 1 11 1 11111  \\
+			$\pi$/K/p & 1 00 1 11111  \\
+			\hline	
+		\end{tabular}
+		\label{table:bi_trig}	
+	\end{table}	
+\end{center}
+	}
 	
+	\frame {
+	\frametitle{CRT Trigger  1/}
+	\framesubtitle{Channel Mapping of CRT Modules  (ref. Camillo M.)}
+	\begin{figure}
+		\centering
+		\includegraphics[width=9cm,height=6cm]{figs/crt_mapping.pdf}
+	\end{figure}
+}
 	
 \end{document}
